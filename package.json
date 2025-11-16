@@ -9,6 +9,10 @@
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^2.0.1",
+<<<<<<< HEAD
+=======
+    "leaflet": "^1.9.4",
+>>>>>>> origin/felipe
     "next": "15.5.5",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -16,6 +20,10 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/google.maps": "^3.58.1",
+<<<<<<< HEAD
+=======
+    "@types/leaflet": "^1.9.21",
+>>>>>>> origin/felipe
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

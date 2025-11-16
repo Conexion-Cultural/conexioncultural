@@ -149,6 +149,7 @@ h2{
   border: 2px solid transparent;
   box-shadow: 0 4px 5px #c1f396;
   border-radius: 15%;
+   background: rgba(249, 243, 221, 0.5);
 }
 
 #team-members div h3 {
@@ -206,6 +207,7 @@ p {
   margin: .3rem;
   border: 2px solid #ccc;
   border-radius: 15%;
+  background: rgba(249, 243, 221, 0.5);
   
 }
 
@@ -296,4 +298,81 @@ body {
   }
 }
 
+/* ---- Misión y Visión ---- */
+
+.mv-section {
+  background: transparent;
+  border-radius: 0;
+  padding: clamp(20px, 3vw, 28px);
+  box-shadow: none;
+  margin: 20px auto 0;
+  max-width: 1100px; /* opcional */
+}
+
+
+.mv-title {
+  margin: 0 0 16px;
+  font-size: clamp(22px, 3vw, 28px);
+  text-align: center;
+}
+
+.mv-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 880px) {
+  .mv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.mv-card {
+  border-radius: 16px;
+  background: rgba(249, 243, 221, 0.5); /* mismo color, 90% opaco */
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #56833d;
+}
+
+
+/* Texto dentro de las tarjetas */
+.mv-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #2f3b1f;                   /* verde oscuro legible */
+}
+
+/* Badge arriba de cada tarjeta (Misión / Visión) */
+.mv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mv-badge--mision {
+  background: rgba(86, 131, 61, 0.12);  /* verde muy suave */
+  color: #355026;
+}
+
+.mv-badge--vision {
+  background: rgba(58, 110, 165, 0.12); /* azul suave de contraste */
+  color: #234256;
+}
+
+.mv-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: currentColor;
+}
+.mv-card:nth-child(2) {
+  border-left-color: #3a6ea5; /* azul suave */
+}
 

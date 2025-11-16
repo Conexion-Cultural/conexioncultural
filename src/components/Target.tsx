@@ -22,17 +22,46 @@ type Props = {
 
 export default function PlacePopup({ place, onClose }: Props) {
   if (!place) return null;
+
   useEffect(() => {
-    const root = document.documentElement;
-    const prev = root.style.overflow;
-    root.style.overflow = "hidden";
-    return () => { root.style.overflow = prev; };
-  }, []);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
 
   return (
-    <div className={s.container} role="dialog" aria-modal="true" aria-label={place.nombre}>
-      <button className={s.btnClose} onClick={onClose} aria-label="Cerrar" />
+    <div
+      className={s.container}
+      role="dialog"
+      aria-modal="true"
+      aria-label={place.nombre}
+    >
+      {/* Fondo oscuro clicable para cerrar */}
+      <button
+        className={s.btnClose}
+        onClick={onClose}
+        aria-label="Cerrar"
+        type="button"
+      />
+
+      {/* Tarjeta de información */}
       <div className={s.infoContainer}>
+        {/* Botón X arriba a la derecha */}
+        <button
+          type="button"
+          className={s.iconClose}
+          aria-label="Cerrar tarjeta"
+          onClick={onClose}
+        />
+
         <div className={s.imgContainer}>
           <img
             src={place.imageUrl}

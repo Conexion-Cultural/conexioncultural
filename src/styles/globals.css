@@ -141,7 +141,7 @@ h2{
     right: -10px;
   }
 }
-
+/*
 #team-members div {
   display: inline-block;
   width: 25%;
@@ -149,18 +149,22 @@ h2{
   border: 2px solid transparent;
   box-shadow: 0 4px 5px #c1f396;
   border-radius: 15%;
+   background: rgba(249, 243, 221, 0.5);
 }
+*/
 
 #team-members div h3 {
   text-align: center;
   font-size: 1.5rem;
-  margin: 1rem 0;
+  margin-top: 200px;
 }
 
 #team-members div p {
-  padding: 2rem;
+  margin-top: 25px;
+  padding: 0;
 }
 
+/*
 #team-members:nth-child(1) {
   margin-left: 500px;
 }
@@ -168,21 +172,51 @@ h2{
 #team-members:nth-child(3) {
   margin-right: 1px;
 }
+*/
 
 #team-members img {
   border-radius: 8px;
   width: 15rem;
-  height: auto;
+  height: 15rem;
   margin: auto;
-  margin-top: 1rem;
+  object-fit: cover; 
+  margin: 0;
 }
-
+/*
 #team-members {
   display: inline-block;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
+*/
+
+#team-members {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;   
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 2.5rem;
+}
+
+#team-members > div {
+  flex: 1 1 260px;        
+  max-width: 320px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 5px #c1f396;
+  border-radius: 20px;
+  background: rgba(249, 243, 221, 0.5);
+
+  display: flex;          
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1.25rem 2rem;
+}
+
 p {
   font-size: 1rem;
   margin: 0 auto;
@@ -192,6 +226,7 @@ p {
   transform: translateY(-5px);
   transition: all 0.3s ease;
 }
+/*
 @media screen and (max-width: 768px) {
   #team-members {
     display: flex;
@@ -206,13 +241,26 @@ p {
   margin: .3rem;
   border: 2px solid #ccc;
   border-radius: 15%;
-  
+  background: rgba(249, 243, 221, 0.5);
 }
+*/
+@media screen and (max-width: 768px) {
+  #team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+  #team-members > div {
+    max-width: 420px;
+    width: 100%;
+    margin: 0;
+  }
+}
+
 
 #team-members div h3{
   text-align: center;
   font-size: 1.5rem;
-  margin: 1rem auto;
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -233,7 +281,7 @@ p {
     color: white;
     line-height: 5.3rem;
   }
-}
+
 
 *,
 *::before,
@@ -296,4 +344,81 @@ body {
   }
 }
 
+/* ---- Misión y Visión ---- */
+
+.mv-section {
+  background: transparent;
+  border-radius: 0;
+  padding: clamp(20px, 3vw, 28px);
+  box-shadow: none;
+  margin: 20px auto 0;
+  max-width: 1100px; /* opcional */
+}
+
+
+.mv-title {
+  margin: 0 0 16px;
+  font-size: clamp(22px, 3vw, 28px);
+  text-align: center;
+}
+
+.mv-grid {
+  display: grid;
+  gap: 60px;
+}
+
+@media (min-width: 880px) {
+  .mv-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.mv-card {
+  border-radius: 16px;
+  background: rgba(249, 243, 221, 0.5); /* mismo color, 90% opaco */
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-left: 5px solid #56833d;
+}
+
+
+/* Texto dentro de las tarjetas */
+.mv-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #2f3b1f;                   /* verde oscuro legible */
+}
+
+/* Badge arriba de cada tarjeta (Misión / Visión) */
+.mv-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.mv-badge--mision {
+  background: rgba(86, 131, 61, 0.12);  /* verde muy suave */
+  color: #355026;
+}
+
+.mv-badge--vision {
+  background: rgba(58, 110, 165, 0.12); /* azul suave de contraste */
+  color: #234256;
+}
+
+.mv-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: currentColor;
+}
+.mv-card:nth-child(2) {
+  border-left-color: #3a6ea5; /* azul suave */
+}
 

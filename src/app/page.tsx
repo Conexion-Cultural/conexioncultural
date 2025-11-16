@@ -29,7 +29,7 @@ export default function Home() {
         <h2>Nuestro Equipo</h2>
         <div id="team-members">
           <div>
-            <img src="/Santiago.jpg" alt="Santiago Huerfano" />
+            <img src="/santiago.jpg" alt="Santiago Huerfano" />
             <h3>Santiago Huerfano</h3>
             <p>
               Especialista en gamificación y creación de contenido educativo,
@@ -37,7 +37,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <img src="/imagen.png" alt="María José Bermeo" />
+            <img src="/majo.jpg" alt="María José Bermeo" />
             <h3>María José Bermeo</h3>
             <p>
               Directora de arte y marketing, a cargo de la identidad visual y
@@ -45,12 +45,54 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <img src="/Nicolas.png" alt="Nicolás Barreto" />
+            <img src="/nicolas.jpg" alt="Nicolás Barreto" />
             <h3>Nicolás Barreto</h3>
             <p>
               Especialista en animación, aportando experiencias interactivas
               dinámicas.
             </p>
+          </div>
+        </div>
+        <div id="mision-vision" className="mv-section">
+          <h2 className="mv-title">Misión y visión</h2>
+
+          <div className="mv-grid">
+            <article className="mv-card">
+              <div className="mv-badge mv-badge--mision">
+                <span className="mv-dot" />
+                <span>Misión</span>
+              </div>
+              <p>
+                Impulsar la memoria cultural y turística del corregimiento de
+                Gualanday a través del diseño gráfico y las tecnologías
+                digitales. Integramos herramientas de cartografía interactiva y
+                narrativa transmedia para fortalecer el sentido de pertenencia,
+                la identidad local y el turismo sostenible. Con el proyecto
+                Conexión Cultural: Gualanday en el Mapa, buscamos crear
+                experiencias pedagógicas e interactivas que conecten a la
+                comunidad con su territorio y proyecten su riqueza natural,
+                histórica y gastronómica hacia audiencias locales, nacionales e
+                internacionales.
+              </p>
+            </article>
+
+            <article className="mv-card">
+              <div className="mv-badge mv-badge--vision">
+                <span className="mv-dot" />
+                <span>Visión</span>
+              </div>
+              <p>
+                Consolidarnos como un referente nacional en el uso del diseño
+                gráfico y la tecnología para la preservación y difusión de la
+                cultura local. Conexión Cultural: Gualanday en el Mapa será una
+                plataforma innovadora que promueva la exploración, el
+                aprendizaje y el desarrollo sostenible de comunidades
+                tradicionalmente invisibilizadas por el avance de las
+                infraestructuras viales. A futuro, aspiramos a replicar este
+                modelo en otros territorios de Colombia, fortaleciendo los
+                vínculos entre cultura, tecnología y turismo responsable.
+              </p>
+            </article>
           </div>
         </div>
       </section>

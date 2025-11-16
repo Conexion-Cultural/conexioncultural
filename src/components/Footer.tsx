@@ -18,7 +18,7 @@ export default function Footer() {
             <Image src="/Instagram.png" alt="Instagram" width={60} height={60}/>
           </a>
 
-          <a href= "tel:+573132416840" target ="_blank" rel="noopener noreferrer" className={s.logoLink} arial-label="WhatsApp">
+          <a href= "tel:+3152650160" target ="_blank" rel="noopener noreferrer" className={s.logoLink} arial-label="WhatsApp">
             <Image src="/WhatsApp.png" alt="Whatsapp" width={60} height={60}/>
           </a>
         </div>

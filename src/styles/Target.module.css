@@ -9,6 +9,7 @@
   animation: fadeIn 160ms ease-out;
 }
 
+/* Fondo clicable para cerrar */
 .btnClose {
   position: absolute;
   inset: 0;
@@ -16,10 +17,11 @@
   padding: 0;
   margin: 0;
   background: transparent;
-  cursor: default;
+  cursor: pointer;
   z-index: 0;
 }
 
+/* Tarjeta */
 .infoContainer {
   position: relative;
   display: grid;
@@ -29,9 +31,9 @@
   margin: 0 auto;
   background-color: #f4ecc6;
   border-radius: 16px;
-  overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   z-index: 1;
+  overflow-y: auto; /* Scroll interno si el contenido es más alto que la ventana */
 }
 
 .imgContainer {
@@ -42,6 +44,7 @@
   margin: 0;
   display: block;
 }
+
 .imgDestination {
   width: 100%;
   height: 100%;
@@ -51,10 +54,14 @@
   border-radius: 0;
   max-width: none;
 }
+
+/* Contenedor de título + descripción */
 .titleContainer {
   width: 100%;
   padding: 12px 16px;
 }
+
+/* Título del lugar */
 .title {
   font-weight: bold;
   font-size: 1.05rem;
@@ -62,6 +69,8 @@
   display: block;
   margin: 0 0 6px 0;
 }
+
+/* Texto descriptivo */
 .description {
   margin: 0;
   max-width: 100%;
@@ -69,20 +78,72 @@
   font-size: 0.95rem;
   line-height: 1.45;
 }
-.btnCloseText {
-  width: auto;
-  margin-left: 0;
-  border-radius: 10px;
-  border: 0.5px solid black;
-  padding: 6px 10px;
-  background: transparent;
+
+/* Botón X arriba a la derecha, con animación tipo hamburguesa */
+.iconClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
-}
-.btnCloseText:hover {
-  background-color: #79a661;
-  transition: background-color 0.2s ease;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
+/* Líneas de la X */
+.iconClose::before,
+.iconClose::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+/* Línea 1 */
+.iconClose::before {
+  transform: rotate(45deg);
+}
+
+/* Línea 2 */
+.iconClose::after {
+  transform: rotate(-45deg);
+}
+
+/* Animación al pasar el mouse (desktop/tablet con mouse) */
+.iconClose:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: scale(1.08) rotate(4deg);
+}
+
+.iconClose:hover::before {
+  transform: rotate(45deg) scaleX(1.1);
+}
+
+.iconClose:hover::after {
+  transform: rotate(-45deg) scaleX(1.1);
+}
+
+/* Animación al hacer click (visible también en móviles como feedback) */
+.iconClose:active {
+  transform: scale(0.9);
+}
+
+/* Caja blanca no usada por ahora */
 .whiteBox {
   display: none;
 }

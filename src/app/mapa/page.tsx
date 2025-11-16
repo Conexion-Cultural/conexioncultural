@@ -16,8 +16,9 @@ export const metadata: Metadata = {
 export default function MapaGualanday() {
   return (
     <main className="page">
-      <div>
+      <div className={s.mapPage}>
         <h2>Mapa de Gualanday</h2>
+
         <Mapa />
         <h3 className={`${s.title}`}>Ubicación en el Mapa</h3>
         <p className={`${s.txt}`}>

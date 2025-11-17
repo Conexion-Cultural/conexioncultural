@@ -182,6 +182,8 @@ export default function Mapa() {
         container.id = MAP_ID;
         container.style.width = "100%";
         container.style.height = "500px";
+        container.style.position = "relative";
+        container.style.zIndex = "0";
         wrapperRef.current.appendChild(container);
       }
 

@@ -30,7 +30,7 @@ export default function Home() {
         <div id="team-members">
           <div>
             <img src="/santiago.jpg" alt="Santiago Huerfano" />
-            <h3>Santiago Huerfano</h3>
+            <h3>Santiago Huérfano</h3>
             <p>
               Especialista en gamificación y creación de contenido educativo,
               responsable del diseño de la estructura digital.

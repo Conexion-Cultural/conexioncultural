@@ -46,7 +46,7 @@ export default function Home() {
           </div>
           <div>
             <img src="/nicolas.jpg" alt="Nicolás Barreto" />
-            <h3>Nicolás Barreto</h3>
+            <h3>Nicolas Barreto</h3>
             <p>
               Especialista en animación, aportando experiencias interactivas
               dinámicas.
